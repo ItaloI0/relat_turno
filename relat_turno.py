@@ -519,3 +519,15 @@ def generate_observacoes_html(observacoes):
     """
     
     return html
+
+    # NOVO CÓDIGO A SER ADICIONADO ABAIXO:
+
+# Cria a instância principal do aplicativo Flask
+app = Flask(__name__)
+
+# Registra o Blueprint para que as rotas sejam reconhecidas
+app.register_blueprint(relatorio_bp)
+
+# Este bloco só será executado se o arquivo for o principal
+if __name__ == '__main__':
+    app.run(debug=True)
